@@ -3,14 +3,23 @@
 
 @section('content')
 
-    <ul>
-        @foreach ($people as $person)
-        
-        
-        <li>
-            <a href="{{route('person.show', $person) }}">{{ $person -> firstName }} {{ $person -> lastName }}</a>
-        </li>
+    <h2>People</h2>
 
+
+        <button>
+            <a href="/create">CREATE A NEW PERSON</a>
+        </button>
+
+
+        <ol>
+            @foreach ($people as $person)
+            <li>
+                <a href="{{route('person.show', $person) }}">{{ $person -> firstName }} {{ $person -> lastName }}</a>
+                -
+                <a href="{{route('person.delete', $person) }}">Delete</a>
+            </li>
+
+            
             <ul>
                 <li>
                     Date of birth: {{ $person -> dateOfBirth }}
@@ -22,9 +31,8 @@
                                 : "null"}}
                 </li>
             </ul>
-
-        @endforeach
-    </ul>
+            @endforeach
+        </ol>
 
 @endsection
 

@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'home']);
-Route::get('/show{person}', [MainController::class, 'show'])->name(('person.show'));
+
+Route::get('/show/{person}', [MainController::class, 'show'])->name('person.show');
+
+Route::get('/delete/{person}', [MainController::class, 'delete'])->name('person.delete');
+
+Route::get('/create', [MainController::class, 'create'])->name('person.create');
+Route::post('/store', [MainController::class, 'store'])->name('person.store');

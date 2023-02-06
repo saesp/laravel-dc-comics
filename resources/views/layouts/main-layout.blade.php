@@ -9,7 +9,11 @@
 </head>
 <body>
     @include('components.header')
+    <br>
+    <br>
     @yield('content')
+    <br>
+    <br>
     @include('components.footer')
 </body>
 </html>
