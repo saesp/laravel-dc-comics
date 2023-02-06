@@ -38,13 +38,13 @@ class MainController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request;
-        // -> validate([
-        //     'firstName' => 'required|string|max:32',
-        //     'lastName' => 'required|string|max:32',
-        //     'dateOfBirth' => 'required|date|-120 years|now|NULL,
-        //     'heigth' => 'nullable|integer|min:40|max:255',
-        // ]);
+        $data = $request
+            ->validate([
+                'firstName' => 'required|string|max:32',
+                'lastName' => 'required|string|max:32',
+                'dateOfBirth' => 'required|date',
+                'heigth' => 'nullable|integer|min:40|max:255',
+            ]);
 
         $person = new Person();
 

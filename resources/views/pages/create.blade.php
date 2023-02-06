@@ -6,11 +6,11 @@
     <form action="{{route('person.store') }}" method="POST">
         @csrf
 
-        <label for="firstName">First Name</label>
+        <label for="firstName">First name</label>
         <input type="text" name="firstName">
         <br>
         <br>
-        <label for="lastName">Last Name</label>
+        <label for="lastName">Last name</label>
         <input type="text" name="lastName">
         <br>  
         <br>  
