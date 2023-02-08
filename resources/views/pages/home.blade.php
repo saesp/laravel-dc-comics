@@ -6,7 +6,7 @@
     <h2>People</h2>
 
 
-        <button>
+        <button class="">
             <a href="/create">CREATE A NEW PERSON</a>
         </button>
 
@@ -20,7 +20,7 @@
             </li>
 
             
-            <ul>
+            <ul class="mb-3">
                 <li>
                     Date of birth: {{ $person -> dateOfBirth }}
                 </li>

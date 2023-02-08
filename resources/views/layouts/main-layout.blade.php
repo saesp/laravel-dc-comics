@@ -11,7 +11,10 @@
     @include('components.header')
     <br>
     <br>
-    @yield('content')
+    <main class="m-2">
+        @yield('content')
+    </main>
+    
     <br>
     <br>
     @include('components.footer')
